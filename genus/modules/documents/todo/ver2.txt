@@ -1,0 +1,3 @@
+- undo
+- remember settings (category etc)
+- search by tags, title, desription

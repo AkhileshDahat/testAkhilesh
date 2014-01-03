@@ -1,0 +1,23 @@
+CREATE TABLE `helpdesk_master` (
+  `master_id` smallint(6) NOT NULL,
+  `workspace_id` int(11) DEFAULT NULL,
+  `teamspace_id` int(11) DEFAULT NULL,
+  `short_code` char(3) DEFAULT NULL,
+  `ticket_count` int(11) DEFAULT NULL,
+  `description` varchar(100) DEFAULT NULL,
+  `logo` varchar(255) DEFAULT NULL,
+  `use_approval` char(1) DEFAULT 'n',
+  `use_attachments` char(1) DEFAULT 'n',
+  `use_tags` char(1) DEFAULT 'n',
+  `use_interested_parties` char(1) DEFAULT 'n',
+  `use_custom_locations` char(1) DEFAULT 'n',
+  `use_tasks` char(1) DEFAULT 'n',
+  `use_custom_fields` char(1) DEFAULT 'n',
+  `use_due_date` char(1) DEFAULT 'n',
+  `use_review` char(1) DEFAULT 'n',
+  `use_feedback` char(1) DEFAULT 'n',
+  `email_address_from` varchar(100) DEFAULT NULL,
+  `email_color` varchar(6) DEFAULT NULL,
+  `log_ticket_history` char(1) DEFAULT 'n',
+  `log_helpdesk_history` char(1) DEFAULT 'n'
+) ENGINE=InnoDB DEFAULT CHARSET=utf8

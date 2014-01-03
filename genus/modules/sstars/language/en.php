@@ -1,0 +1,10 @@
+<?php
+/*
+	ADD NEW FOLDER
+*/
+DEFINE("_DOCUMENTS_ADD_FOLDER_TITLE_","Add New Folder");
+DEFINE("_DOCUMENTS_FOLDER_NAME_","Folder Name");
+DEFINE("_DOCUMENTS_ADD_FOLDER_","Add New Folder");
+
+
+?>

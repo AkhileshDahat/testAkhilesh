@@ -1,0 +1,28 @@
+<?php
+/** ensure this file is being included by a parent file */
+defined( '_VALID_MVH' ) or die( 'Direct Access to this location is not allowed.' );
+
+function SystemHistory($module,$description,$user_id) {
+	$db=$GLOBALS['db'];
+
+	if (EMPTY($module)) { return False; }
+	if (EMPTY($description)) { return False; }
+	if (!IS_NUMERIC($user_id)) { return False; }
+
+	$sql="INSERT INTO ".$GLOBALS['database_prefix']."system_history (module,description,user_id,date_log)
+				VALUES (
+				'".EscapeData($module)."',
+				'".EscapeData($description)."',
+				".$user_id.",
+				now()
+				)";
+	$result=$db->Query($sql);
+	if ($db->AffectedRows($result) > 0) {
+		return True;
+	}
+	else {
+		return False;
+	}
+}
+
+?>

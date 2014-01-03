@@ -1,0 +1,18 @@
+<?php
+/** ensure this file is being included by a parent file */
+defined( '_VALID_MVH' ) or die( 'Direct Access to this location is not allowed.' );
+
+function LoadTask() {
+
+	if (!ISSET($_GET['sub'])) {
+		require_once $GLOBALS['dr']."modules/sstars/functions/forms/batch_form.php";
+		return BatchForm();
+	}
+	else {
+		$file=$GLOBALS['dr']."modules/sstars/modules/functions/forms/".$_GET['sub'].".php";
+		if (file_exists($file)) {
+			require_once $file;
+		}
+	}
+}
+?>

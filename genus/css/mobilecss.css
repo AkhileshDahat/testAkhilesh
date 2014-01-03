@@ -1,0 +1,132 @@
+body {
+	margin: 0px 0px 0px 0px;
+	background: #ffffff;
+}
+
+input 
+{
+    font-family: verdana;
+    font-size: 10px;
+    color: #000000;
+}
+
+textarea {
+	font-family:tahoma,sans-serif;
+	font-size:10px;	
+}
+
+select {
+	font-family:tahoma,sans-serif;
+	font-size:10px;
+	background: #f3f3f3;
+}
+
+tr.colhead {
+	font-family:verdana,tahoma,arial;
+	font-size:12px;
+	color:#ffffff;
+	text-decoration:none;
+	font-weight:bold;
+	background: #4791C5;
+	padding:5px;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left:15px;
+}
+
+tr.formbuttonrow {
+	font-family:verdana,tahoma,arial;
+	font-size:12px;
+	color:#ffffff;
+	background:#608FC6;	
+}
+
+td.alternatecell1 {
+	font-family:verdana,tahoma,arial;
+	font-size:12px;
+	color:#000000;
+	text-decoration:none;
+	background: #FFF7E5;
+}
+
+td.alternatecell2 {
+	font-family:verdana,tahoma,arial;
+	font-size:12px;
+	color:#000000;
+	text-decoration:none;
+	background: #DBEAF5;
+}
+
+td.colhead {
+	font-family:arial,tahoma,verdana;
+	font-size:18px;
+	color:#5D688C;
+	text-decoration:none;
+	font-weight:bold;
+}
+
+table.loginform {
+	font-family:verdana,tahoma,arial;
+	font-size:10px;
+	color:#993333;
+	text-decoration:none;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:0px;
+	empty-cells:show;
+	background: #F7F8FB;
+}
+
+table.plain
+{
+	font-family:verdana,tahoma,arial;
+	font-size:10px;
+	color:#993333;
+	text-decoration:none;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:0px;
+	empty-cells:show;
+}
+
+table.warning {
+	font-family:verdana,tahoma,arial;
+	font-size:10px;
+	color:#ffffff;
+	text-decoration:none;
+	border: #999999 1px solid;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:0px;
+	empty-cells:show;
+	background: red;
+}
+
+table.information {
+	font-family:verdana,tahoma,arial;
+	font-size:10px;
+	color:#000000;
+	text-decoration:none;
+	border: #999999 1px solid;
+	padding-top:0px;
+	padding-bottom:0px;
+	padding-left:0px;
+	empty-cells:show;
+	background: lime;
+}
+
+table.alert {
+	padding: 5px;
+	border: red 2px solid;
+	font-family:verdana,tahoma,arial;
+	font-size:12px;
+	width: 100%;
+	background: #0681BF;
+}
+
+.footer {
+	font-family:verdana,tahoma,arial;
+	font-size:12px;
+	color:#999999;
+	text-decoration:none;
+}

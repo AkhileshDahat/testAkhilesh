@@ -1,0 +1,11 @@
+CREATE TABLE `document_setup` (
+  `show_document_rating` char(1) DEFAULT 'n',
+  `use_versioning` char(1) DEFAULT 'n',
+  `use_check_in_out` char(1) DEFAULT 'n',
+  `user_drag_drop_upload` char(1) DEFAULT 'n',
+  `workspace_id` int(11) DEFAULT '0',
+  `teamspace_id` int(11) DEFAULT '0',
+  `enable_document_encryption` char(1) DEFAULT 'n',
+  `enable_anonymous_document_links` char(1) DEFAULT 'n',
+  `theme` varchar(30) DEFAULT 'default'
+) ENGINE=InnoDB DEFAULT CHARSET=latin1

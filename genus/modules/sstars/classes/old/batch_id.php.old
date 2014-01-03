@@ -1,0 +1,39 @@
+<?php
+/** ensure this file is being included by a parent file */
+defined( '_VALID_MVH' ) or die( 'Direct Access to this location is not allowed.' );
+
+class BatchID {
+
+	function BatchID($batch_id) {
+
+		$db=$GLOBALS['db'];
+
+		$sql="SELECT b.invoice_number, b.description, b.cost_price, b.purchase_date, b.delivery_date, b.vendor_id,
+					vm.vendor_name
+					FROM ".$GLOBALS['database_prefix']."batch b, ".$GLOBALS['database_prefix']."vendor_master vm
+					WHERE b.batch_id = '".$batch_id."'
+					AND b.vendor_id = vm.vendor_id
+					";
+		//echo $sql."<br>";
+		$result = $db->Query($sql);
+		if ($db->NumRows($result) > 0) {
+			while($row = $db->FetchArray($result)) {
+				$this->invoice_number=$row["invoice_number"];
+				$this->description=$row["description"];
+				$this->cost_price=$row["cost_price"];
+				$this->purchase_date=$row["purchase_date"];
+				$this->delivery_date=$row["delivery_date"];
+				$this->vendor_id=$row["vendor_id"];
+				$this->vendor_name=$row["vendor_name"];
+			}
+		}
+	}
+	function InvoiceNumber() {	return $this->invoice_number; }
+	function Description() {	return $this->description; }
+	function CostPrice() {	return $this->cost_price; }
+	function PurchaseDate() {	return $this->purchase_date; }
+	function DeliveryDate() {	return $this->delivery_date; }
+	function VendorID() {	return $this->vendor_id; }
+	function VendorName() {	return $this->vendor_name; }
+}
+?>

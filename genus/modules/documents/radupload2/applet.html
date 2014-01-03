@@ -1,0 +1,62 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Rad Upload Lite</title>
+</head>
+	<body>
+	 <table border="0" valign="middle" align="center" cellpadding="15">
+	  <tr>
+   	   <td width="290" valign="top">
+		   <h3 align="center">Rad Upload</h3>
+		   <p>Thank you for downloading Rad Upload Lite</p>
+
+		   <p>The lite edition has all the features of Rad Upload standard edition except for the fact
+		   that maximum file upload size is restricted to 512 Kilo bytes.</p>
+		   <p>Rad Upload Plus has additional features including recursive folder upload and configurable
+		   upload limit.</p>
+		   <p>Please visit <a href="http://www.radinks.com/upload/?dn">Rad Upload</a> on the web for more information.
+		   </p>
+	   </td>
+
+       	   <td>
+   		<applet
+   			archive  = "dndlite.jar"
+   			code     = "com.radinks.dnd.DNDAppletLite"
+   			name     = "Smile"
+   			hspace   = "0"
+   			vspace   = "0"
+   			width = "290"
+   			height = "290"
+
+   			align    = "middle"
+   		>
+
+   				<param name = "session_id" value = "123">
+<!-- application generated session id (if required)-->
+
+   		<param name="max_upload" value="2000">
+   				<!-- size in kilobytes (takes effect only in Rad Upload Plus) -->
+
+   		<param name = "url" value = "http://localhost/radupload2/upload.php">
+   				<!-- you can pass additional parameters by adding them to the url-->
+   				<!-- to upload to an ftp server instead of a web server, please specify a url
+   				     in the following format:
+   				     	ftp://username:password@ftp.myserver.com
+   				     replacing username, password and ftp.myserver.com with corresponding entries for
+   				     your site -->
+
+   		<param name = "message" value="Drop your files here.">
+   				<!-- edit the above line to customize your applet's display -->
+
+   		</applet>
+
+   		<p style="font-size:80%" align="center"><A href="applet-js.html">Click Here</a> if the applet does not start up</p>
+   	  </td>
+   </tr>
+  </table>
+  <p>&nbsp;</p>
+  <p>&nbsp;</p>
+  <p align="center">A product of <a href="http://www.radinks.com/?dn">Rad Inks</a></p>
+ </body>
+</html>
+

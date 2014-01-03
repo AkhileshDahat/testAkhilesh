@@ -1,0 +1,19 @@
+Required
+80% - category security
+80% - category settings - approval etc
+mysql support
+replace all post and get with a central function
+
+Nice to have
+
+- check all
+20% - icons
+- language
+- upload to class
+- filter by cols
+- fix the privilege setting for parent_id versus category_id
+- 50% - download by url for anony
+- document title and description in document_files
+- logging for document module
+- document tags
+- all forms to use new format

@@ -1,0 +1,12 @@
+SELECT df.document_id, df.title, df.description, df.category_id, df.status_id, df.date_start_publishing, df.date_end_publishing,
+df.user_id, df.date_added, df.filename, df.filetype, df.filesize,
+df.version_number, df.checked_out, df.user_id_checked_out, df.date_checked_out, df.download_count,
+df.locked, df.user_id_locked, df.date_locked, df.latest_version,
+dc.category_name, dc.category_description, dc.workspace_id, dc.teamspace_id,
+dsm.status_name, dsm.is_pending, dsm.is_current, dsm.is_archived, dsm.is_deleted, dsm.is_rejected,
+um.full_name as user_created
+FROM framework.document_files df, framework.document_categories dc, framework.document_status_master dsm,
+framework.user_master um
+WHERE df.category_id = dc.category_id
+AND df.status_id = dsm.status_id
+AND df.user_id = um.user_id

@@ -1,0 +1,12 @@
+INSERT INTO `leave_category_master` values ('1','Annual','n','1','y','paid','n','n'),
+('2','Emergency','n','1','n','paid','n','n'),
+('3','Medical','n','1','n','paid','n','n'),
+('4','Unpaid','y','1','n','unpaid','n','n'),
+('5','Religious','n','1','n','paid','n','n'),
+('6','Marriage','n','1','n','paid','n','n'),
+('7','Paternity','n','1','n','paid','n','n'),
+('9','Emergency','n','3','n','paid','n','n'),
+('10','Annual','n','3','n','paid','y','n'),
+('12','Planning-Saved','n','3','n','paid','n','y'),
+('13','Annual','n','17','n','paid','n','n'),
+('14','Emergency','n','17','n','paid','n','n')

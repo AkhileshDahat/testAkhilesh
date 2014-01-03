@@ -1,0 +1,48 @@
+<?php
+/** ensure this file is being included by a parent file */
+defined( '_VALID_MVH' ) or die( 'Direct Access to this location is not allowed.' );
+
+class WorkspaceInfo {
+
+	function WorkspaceInfo($workspace_id) {
+
+		$db=$GLOBALS['db'];
+
+		$sql="SELECT wm.workspace_code, wm.name, wm.logo, wm.max_teamspaces, wm.max_size, wm.max_users,
+					wm.date_start, wm.date_end, wm.status_id, wm.enterprise,
+					wsm.status_name
+					FROM ".$GLOBALS['database_prefix']."workspace_master wm, ".$GLOBALS['database_prefix']."workspace_status_master wsm
+					WHERE wm.workspace_id = '".$workspace_id."'
+					AND wm.status_id = wsm.status_id
+					";
+		//echo $sql."<br>";
+		$result = $db->Query($sql);
+		if ($db->NumRows($result) > 0) {
+			while($row = $db->FetchArray($result)) {
+				$this->workspace_code=$row["workspace_code"];
+				$this->name=$row["name"];
+				$this->logo=$row["logo"];
+				$this->max_teamspaces=$row["max_teamspaces"];
+				$this->max_size=$row["max_size"];
+				$this->max_users=$row["max_users"];
+				$this->date_start=$row["date_start"];
+				$this->date_end=$row["date_end"];
+				$this->status_id=$row["status_id"];
+				$this->enterprise=$row["enterprise"];
+				$this->status_name=$row["status_name"];
+			}
+		}
+	}
+	function WorkspaceCode() {	return $this->workspace_code; }
+	function Name() {	return $this->name; }
+	function Logo() {	return $this->logo; }
+	function MaxTeamspaces() {	return $this->max_teamspaces; }
+	function MaxSize() {	return $this->max_size; }
+	function MaxUsers() {	return $this->max_users; }
+	function AvailableStartDate() {	return $this->date_start; }
+	function AvailableEndDate() {	return $this->date_end; }
+	function StatusID() {	return $this->status_id; }
+	function Enterprise() {	return $this->enterprise; }
+	function StatusName() {	return $this->status_name; }
+}
+?>

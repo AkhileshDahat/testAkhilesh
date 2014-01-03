@@ -1,0 +1,9 @@
+<?php
+/*
+	MODULE GENERAL
+*/
+DEFINE("_SMS_MENU_HOME_","Home");
+DEFINE("_SMS_MENU_SEND_","Send");
+DEFINE("_SMS_MENU_SENT_","Sent Items");
+DEFINE("_SMS_MENU_ACL_","ACL");
+?>
